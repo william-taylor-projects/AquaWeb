@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+.bs-remove-tab {
+    font-size: 0.875em !important;
+    margin-left: 5px !important;
+}
+
+.CodeMirror {
+    height: 450px;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.tab-content {
+    border-left: 1px solid #dfe2e6;
+    border-right: 1px solid #dfe2e6;
+    border-bottom: 1px solid #dfe2e6;
+    margin-bottom: 50px;
+}
