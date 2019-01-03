@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~ag-grid-community/dist/styles/ag-grid.css";
-@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import "~ag-grid-community/dist/styles/ag-theme-bootstrap.css";
 
 .bs-remove-tab {
     font-size: 0.875em !important;
@@ -9,12 +9,13 @@
 }
 
 .CodeMirror {
-    height: 450px;
+    height: 368px;
+    font-size: 12px;
 }
 
 .CodeMirror-gutters {
     border-right: none;
-    background-color: transparent;
+    background-color: white;
     white-space: nowrap;
 }
 
@@ -23,4 +24,52 @@
     border-right: 1px solid #dfe2e6;
     border-bottom: 1px solid #dfe2e6;
     margin-bottom: 50px;
+}
+
+#textcard {
+    margin-top: 65px;
+    border-radius: 0px;
+}
+
+.justified {
+    text-align: justify;
+}
+
+.grip {
+    font-size: 10px;
+    background: #f7f7f700;
+    height: 18px;
+    user-select: none;
+    cursor: row-resize;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0px;
+}
+
+.grip:before {
+    content: '\2261'; 
+    color: #999;
+    position: absolute;
+    left: 50%;
+}
+
+.grip:hover {
+    background: #f0f0f0;
+}
+
+.grip:hover:before {
+    color: #000;
+}
+
+
+.ag-theme-bootstrap .ag-root {
+    border: 1px solid #dddddd;
+}
+
+.ag-theme-bootstrap .ag-body {
+    background-color: white;
+}
+
+.ag-body-viewport-wrapper.ag-layout-auto-height, .ag-body-viewport-wrapper.ag-layout-normal {
+    border-top: 1px solid #ddd;
 }
