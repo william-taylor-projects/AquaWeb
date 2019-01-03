@@ -11,12 +11,14 @@ declare var CodeMirror;
 export class QueryComponent implements OnInit {
     @ViewChild('editor') editorElement: ElementRef;
     @ViewChild('preview') previewElement: ElementRef;
+    @ViewChild('query') queryElement: ElementRef;
 
     playgroundApi: any;
     previewApi: any;
-    defaultScript = '/ Enter your code here...';
+    queryApi: any;
     selected: '';
 
+    rowData = [];
     columnDefs = [
         { headerName: 'Column 1', field: 'a' },
         { headerName: 'Column 2', field: 'b' },
@@ -26,7 +28,6 @@ export class QueryComponent implements OnInit {
         { headerName: 'Column 6', field: 'f' }
     ];
 
-    rowData = [];
     queries = [
         'Unique B520 Codes',
         'In Scope Accounts',
@@ -37,6 +38,7 @@ export class QueryComponent implements OnInit {
         for (let i = 0; i < 100; i++) {
             this.rowData.push({ a: 'Value', b: 'Value', c: 'Value', d: 'Value', e: 'Value', f: 'Value' });
         }
+
         const playgroundScript = `
             / Write your script below, hit run to execute queries, see the results in the table below.
             / * Remember to create new canned queries for reocurring queries
@@ -58,21 +60,18 @@ export class QueryComponent implements OnInit {
 
         `;
 
-        this.playgroundApi = CodeMirror.fromTextArea(this.editorElement.nativeElement, {
+        const normalOptions = {
             lineNumbers: true,
             theme: 'idea',
             mode: 'text/x-q'
-        });
+        }
 
+        this.playgroundApi = CodeMirror.fromTextArea(this.editorElement.nativeElement, normalOptions);
         this.playgroundApi.setValue(this.trimScriptText(playgroundScript));
-
-        this.previewApi = CodeMirror.fromTextArea(this.previewElement.nativeElement, {
-            lineNumbers: true,
-            theme: 'idea',
-            mode: 'text/x-q',
-            readOnly: true
-        });
-
+        this.queryApi = CodeMirror.fromTextArea(this.queryElement.nativeElement, normalOptions);
+        this.queryApi.setSize(null, '450px');
+        this.queryApi.setValue(Array(25).map(x => '').join('\n'))
+        this.previewApi = CodeMirror.fromTextArea(this.previewElement.nativeElement, Object.assign(normalOptions, { readOnly: true }));
         this.previewApi.setSize(null, '75vh');
     }
 

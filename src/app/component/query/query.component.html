@@ -1,9 +1,10 @@
 <div class='row'>
     <div class='col-sm-10 offset-sm-1 mt-4'>
         <tabset>
-            <tab heading="Playground" [removable]="false">
+            <tab heading="Query Playground" [removable]="false">
                 <div class='row'>
                     <div class='col-md-12'>
+                        <button class='btn btn-sm btn-success float-right m-2'>Run</button>
                         <textarea #editor></textarea>
                         <div draggable="true" (drag)="onDrag($event)" (dragstart)='onDragStart($event)' (dragend)="onDragEnd($event)"
                             class='grip'></div>
@@ -38,7 +39,12 @@
                             <dd class="col-sm-9 text-right">2018/01/01</dd>
                             <dt class="col-sm-12">Description</dt>
                             <dd class="col-sm-12 justified">
-                                Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. She continue appetite endeavor she judgment interest the met. For she surrounded motionless fat resolution may. 
+                                Quick six blind smart out burst. Perfectly on furniture dejection determine my
+                                depending an to. Add short water court fat. Her bachelor honoured perceive securing but
+                                desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten
+                                humoured greatest and yourself. Besides ye country on observe. She continue appetite
+                                endeavor she judgment interest the met. For she surrounded motionless fat resolution
+                                may.
                             </dd>
                             <dt class="col-sm-12">Tags</dt>
                             <dd class="col-sm-12 justified">
@@ -47,7 +53,8 @@
                         </dl>
                         <div class='mt-2'>
                             <div class='text-center'>
-                                <button class='btn btn-sm btn-success mt-2'>Run</button>
+                                <button class='btn btn btn-primary m-2'>Update</button>
+                                <button class='btn btn btn-success m-2'>Execute</button>
                             </div>
                         </div>
                     </div>
@@ -58,25 +65,37 @@
             </tab>
             <tab heading="New Query">
                 <div class='row'>
-                    <div class='col-md-12 p-3 pl-4 pr-4'>
+                    <div class='col-md-6 p-3 pl-4 pr-4'>
                         <form>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Name</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                <label for="exampleFormControlInput1"><strong>Query Name</strong></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Awesome Query">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Author</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
+                                <label for="exampleFormControlSelect1"><strong>Query Author</strong></label>
+                                <input type='text' class='form-control' placeholder="William Taylor">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Query</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="exampleFormControlSelect1"><strong>Query Tags</strong></label>
+                                <input type='text' class='form-control' placeholder="15c33, Core, Daily">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1"><strong>Query Description</strong></label>
+                                <textarea style='resize: none;' rows='6' type='text' class='form-control' placeholder="Simple query example..."></textarea>
+                            </div>
+                            <div class='text-center'>
+                                <button class='btn btn-primary'>Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='col-md-6 p-3 pl-4 pr-4'>
+                        <form style='margin-left:-20px;'>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1"><strong>Query Code</strong></label>
+                                <div style='margin-left:-20px;'>
+                                    <textarea id='query' #query></textarea>
+                                </div>
+                                
                             </div>
                         </form>
                     </div>
