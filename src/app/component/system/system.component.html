@@ -1,0 +1,65 @@
+<div class='row'>
+    <div class='col-sm-10 offset-sm-1 mt-4'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <ag-grid-angular style="width: 100%; height: 658px;" class="ag-theme-bootstrap" [rowData]="rowData"
+                    [columnDefs]="columnDefs">
+                </ag-grid-angular>
+            </div>
+            <div class='col-md-4'>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Morning Reports</h5>
+                        <p class="mb-3 text-muted"><smalL>Aqua will not be available until these reports finish</smalL></p>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="success">ISG Morning
+                                Report - Success</progressbar>
+                        </div>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="success">GWM Morning
+                                Report - Success</progressbar>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Aqua Services</h5>
+                        <p class="mb-3 text-muted"><smalL>These services enable your queries.</smalL></p>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="success">Aqua Service 1
+                                - Up</progressbar>
+                        </div>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="success">Aqua Service 2
+                                - Up</progressbar>
+                        </div>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="warning">Aqua Service 3
+                                - Down</progressbar>
+                        </div>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="warning">Aqua Service 4
+                                - Down</progressbar>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Final Reports</h5>
+                        <p class="mb-3 text-muted"><smalL>These final reports must be locked by EOD.</smalL></p>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="info">ISG Final Report -
+                                Running</progressbar>
+                        </div>
+                        <div class="mb-3">
+                            <progressbar [striped]="true" [animate]='true' [value]="100" type="danger">GWM Final Report
+                                - Failed</progressbar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
