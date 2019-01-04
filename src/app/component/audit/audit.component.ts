@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'audit-view',
-  templateUrl: './audit.component.html',
-  styleUrls: ['./audit.component.css']
+    selector: 'audit-view',
+    templateUrl: './audit.component.html',
+    styleUrls: ['./audit.component.css']
 })
 export class AuditComponent implements OnInit {
     rowData = [];
@@ -16,8 +16,22 @@ export class AuditComponent implements OnInit {
         { headerName: 'Success', field: 'success' }
     ];
 
+    selectedUser = "";
+    selectedName = "";
+    users = [
+        'william-taylor',
+        'wiltaylo',
+        'willberto'
+    ]
+
+    names = [
+        'Simple Query A',
+        'Simple Query B',
+        'Simple Query C'
+    ]
+
     ngOnInit() {
-        for(let i = 0; i < 25; i++) {
+        for (let i = 0; i < 25; i++) {
             this.rowData.push({
                 user: 'wiltaylo',
                 name: 'Simple Query',

@@ -3,14 +3,17 @@
         <div class='row'>
             <div class='col-md-12'>
                 <form class="form-inline justify-content-center">
-                    <input type="text" class="form-control form-control-sm mb-2 mr-sm-3" id="inlineFormInputName2" placeholder='User'>
-                    <input type="text" class="form-control form-control-sm mb-2 mr-sm-3" id="inlineFormInputName2" placeholder='Name'>
-                    <input style='width:225px;' type="text" placeholder="Date Range" class="form-control form-control-sm mb-2 mr-sm-3" bsDaterangepicker>
+                    <input name='userInput' [(ngModel)]="selectedUser" [typeahead]="users" class="form-control form-control-sm mb-2 mr-sm-3"
+                        placeholder='User'>
+                    <input name='nameInput' [(ngModel)]="selectedName" [typeahead]="names" class="form-control form-control-sm mb-2 mr-sm-3"
+                        placeholder='Name'>
+                    <input style='width:225px;' type="text" placeholder="Date Range" class="form-control form-control-sm mb-2 mr-sm-3"
+                        bsDaterangepicker>
                     <select class="form-control form-control-sm mb-2 mr-sm-3" style='width: 125px;'>
-                            <option selected>All</option>
-                            <option>Canned</option>
-                            <option>AdHoc</option>
-                          </select>
+                        <option selected>All</option>
+                        <option>Playground</option>
+                        <option>Canned</option>
+                    </select>
                     <button type="submit" class="btn btn-sm btn-primary mb-2">Query</button>
                 </form>
             </div>

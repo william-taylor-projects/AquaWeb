@@ -7,13 +7,13 @@ import { BsModalService } from 'ngx-bootstrap/modal';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('feedbackModal') 
+  @ViewChild('feedbackModal')
   feedbackTemplate: TemplateRef<any>;
 
-  @ViewChild('supportModal') 
+  @ViewChild('supportModal')
   supportTemplate: TemplateRef<any>;
 
-  @ViewChild('aboutModal') 
+  @ViewChild('aboutModal')
   aboutTemplate: TemplateRef<any>;
 
   modalRef: any;
@@ -24,13 +24,5 @@ export class AppComponent {
 
   feedback() {
     this.modalRef = this.service.show(this.feedbackTemplate);
-  }
-
-  support() {
-    this.modalRef = this.service.show(this.supportTemplate);
-  }
-
-  about() {
-    this.modalRef = this.service.show(this.aboutTemplate);
   }
 }

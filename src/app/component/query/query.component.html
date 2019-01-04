@@ -12,8 +12,8 @@
                 </div>
                 <div class='row'>
                     <div class='col-md-12 pl-4 pr-4 mt-2'>
-                        <ag-grid-angular [enableFilter]='true' style="width: 100%; height: 500px;" class="ag-theme-bootstrap" [rowData]="rowData"
-                            [columnDefs]="columnDefs">
+                        <ag-grid-angular [enableFilter]='true' style="width: 100%; height: 500px;" class="ag-theme-bootstrap"
+                            [rowData]="rowData" [columnDefs]="columnDefs">
                         </ag-grid-angular>
                         <div class='text-center m-2'>
                             <button type="button" class="btn btn-sm btn-success m-2">Export Excel</button>
@@ -48,12 +48,11 @@
                             </dd>
                             <dt class="col-sm-12">Tags</dt>
                             <dd class="col-sm-12 justified">
-                                15c33, Focus, Refdata, Hacker, Daily
+                                Important, Complex, Long, Daily
                             </dd>
                         </dl>
                         <div class='mt-2'>
                             <div class='text-center'>
-                                <button class='btn btn btn-primary m-2'>Update</button>
                                 <button class='btn btn btn-success m-2'>Execute</button>
                             </div>
                         </div>
@@ -95,7 +94,6 @@
                                 <div style='margin-left:-20px;'>
                                     <textarea id='query' #query></textarea>
                                 </div>
-                                
                             </div>
                         </form>
                     </div>
@@ -103,35 +101,4 @@
             </tab>
         </tabset>
     </div>
-    <!--
-    <div class='col-md-4'>
-        <div id='textcard' class="card">
-            <div class="card-body">
-                <h5 class="card-title">Overview</h5><hr/>
-                <div class="card-text">
-                    <h6>Playground</h6>
-                    <p class='small justified'>
-                        The playground section allows you to execute on a adhock basis.
-                        These queries are audited, and you should only use the playground
-                        for quick small queries for your own benefit. Any reoccurring query
-                        should be save as a 'Canned Query'.
-                    </p>
-                    <h6>Canned Queries</h6>
-                    <p class='small justified'>
-                        Reoccurring queries will be saved as 'Canned Queries' you can search
-                        for them in the 'Canned Queries' tab. Once you have found the one you like,
-                        you can load it into the playground.
-                    </p>
-                    <h6>New Query</h6>
-                    <p class='small justified'>
-                        If you have a query that will be run on a regular basis
-                        open the 'New Query' tab to make it a 'Canned Query'. Once you have,
-                        it will allow others to view it, including the developers who will be able
-                        to help if the query has any issues.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
 </div>

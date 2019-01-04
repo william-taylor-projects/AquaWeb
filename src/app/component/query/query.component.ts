@@ -29,9 +29,9 @@ export class QueryComponent implements OnInit {
     ];
 
     queries = [
-        'Unique B520 Codes',
-        'In Scope Accounts',
-        'GZ09 Ref Data'
+        'Unique Accounts',
+        'Regular Accounts',
+        'Example Accounts'
     ];
 
     ngOnInit() {

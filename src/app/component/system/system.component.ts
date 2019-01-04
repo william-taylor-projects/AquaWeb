@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'system-view',
-  templateUrl: './system.component.html',
-  styleUrls: ['./system.component.css']
+    selector: 'system-view',
+    templateUrl: './system.component.html',
+    styleUrls: ['./system.component.css']
 })
-export class SystemComponent {
+export class SystemComponent implements OnInit {
     rowData = [];
     columnDefs = [
         { headerName: 'Feed', field: 'feed' },
@@ -16,7 +16,7 @@ export class SystemComponent {
     ];
 
     ngOnInit() {
-        for(let i = 0; i < 25; i++) {
+        for (let i = 0; i < 25; i++) {
             this.rowData.push({
                 feed: 'Accounts',
                 jobs: 20,
