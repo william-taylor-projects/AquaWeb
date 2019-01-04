@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AgGridModule } from 'ag-grid-angular';
 
@@ -36,6 +37,7 @@ let routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    BsDatepickerModule.forRoot(),
     BsDropdownModule.forRoot(),
     TypeaheadModule.forRoot(),
     ModalModule.forRoot(),

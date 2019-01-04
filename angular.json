@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "node_modules/codemirror/lib/codemirror.css",
               "node_modules/codemirror/theme/idea.css",
               "src/styles.scss"

@@ -1,0 +1,30 @@
+<div class='row'>
+    <div class='col-sm-10 offset-sm-1 mt-4'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <form class="form-inline justify-content-center">
+                    <input type="text" class="form-control form-control-sm mb-2 mr-sm-3" id="inlineFormInputName2" placeholder='User'>
+                    <input type="text" class="form-control form-control-sm mb-2 mr-sm-3" id="inlineFormInputName2" placeholder='Name'>
+                    <input style='width:225px;' type="text" placeholder="Date Range" class="form-control form-control-sm mb-2 mr-sm-3" bsDaterangepicker>
+                    <select class="form-control form-control-sm mb-2 mr-sm-3" style='width: 125px;'>
+                            <option selected>All</option>
+                            <option>Canned</option>
+                            <option>AdHoc</option>
+                          </select>
+                    <button type="submit" class="btn btn-sm btn-primary mb-2">Query</button>
+                </form>
+            </div>
+        </div>
+        <div class='row mt-4'>
+            <div class='col-md-12'>
+                <ag-grid-angular [enableFilter]='true' style="width: 100%; height: 70vh;" class="ag-theme-bootstrap"
+                    [rowData]="rowData" [columnDefs]="columnDefs">
+                </ag-grid-angular>
+
+                <div class='text-center m-2'>
+                    <button type="button" class="btn btn-sm btn-success m-2">Export Excel</button>
+                    <button type="button" class="btn btn-sm btn-danger m-2">Export PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
